@@ -6,4 +6,4 @@ RUN mkdir emsdk && chown appuser emsdk
 
 USER appuser
 
-RUN git clone https://github.com/juj/emsdk.git && ./emsdk/emsdk install latest
+RUN git clone https://github.com/juj/emsdk.git
