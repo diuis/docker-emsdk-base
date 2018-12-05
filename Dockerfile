@@ -1,4 +1,4 @@
-FROM diuis/docker-debian9-git_wget_python3_nodejs:latest
+FROM diuis/docker-debian9-git_wget_python3_nodejs:v1.0.0
 
 RUN apt-get update && apt-get install --no-install-recommends -y cmake build-essential && \
     apt-get autoremove && apt-get clean
