@@ -6,6 +6,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y cmake build-ess
 
 USER appuser
 RUN wget -nv https://github.com/juj/emsdk/archive/master.zip -P /home/appuser && \
-    tar xf /home/appuser/master.zip -C /emsdk && \
+    tar xzf /home/appuser/master.zip -C /emsdk && \
     rm /home/appuser/master.zip
 
