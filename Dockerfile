@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y cmake build-ess
     mkdir emsdk && chown appuser emsdk
 
 USER appuser
-RUN wget -nv https://github.com/juj/emsdk/archive/master.zip -P /home/appuser && \
-    tar xzf /home/appuser/master.zip -C /emsdk && \
-    rm /home/appuser/master.zip
+RUN wget -nv https://github.com/juj/emsdk/tarball/master -P /home/appuser -O emsdk.tar && \
+    tar xf /home/appuser/emsdk.tar -C /emsdk && \
+    rm /home/appuser/emsdk.tar
 
