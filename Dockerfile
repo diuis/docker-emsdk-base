@@ -1,11 +1,11 @@
-FROM diuis/docker-debian9-wget_nodejs_python3:v1.0.5
+FROM diuis/docker-debian9-wget_nodejs_python3:v1.0.0
 
-RUN apt-get update && apt-get install --no-install-recommends -y cmake build-essential && \
-    apt-get autoremove && apt-get clean && \
-    mkdir emsdk && chown appuser emsdk
+RUN apt-get update && apt-get install --no-install-recommends -y make cmake g++ gcc && \
+    apt-get autoremove && apt-get clean
 
 USER appuser
 RUN wget -nv https://github.com/juj/emsdk/tarball/master -O /home/appuser/emsdk.tar && \
-    tar xf /home/appuser/emsdk.tar -C /emsdk && \
+    mkdir /home/appuser/emsdk && \
+    tar xf /home/appuser/emsdk.tar -C /home/appuser/emsdk --strip-components 1 && \
     rm /home/appuser/emsdk.tar
 
