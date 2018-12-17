@@ -1,6 +1,6 @@
 FROM diuis/docker-debian9-wget_nodejs_python3:v1.0.0
 
-RUN apt-get update && apt-get install --no-install-recommends -y make automake autotools cmake g++ gcc && \
+RUN apt-get update && apt-get install --no-install-recommends -y make automake autoconf cmake g++ gcc && \
     apt-get autoremove && apt-get clean
 
 USER appuser
