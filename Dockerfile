@@ -2,7 +2,7 @@ FROM diuis/docker-debian9-wget_nodejs_python3:v1.0.0
 
 ARG EMSDK_ARCHIVE=https://github.com/juj/emsdk/tarball/master
 
-RUN apt-get update && apt-get install --no-install-recommends -y make cmake g++ gcc && \
+RUN apt-get update && apt-get install --no-install-recommends -y make cmake g++ gcc git openjdk-8-jdk && \
     apt-get autoremove && apt-get clean
 
 USER appuser
