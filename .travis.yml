@@ -9,7 +9,7 @@ services:
 
 env:
   global:
-    - IMAGE_NAME=diuis/docker-ubuntu-emsdk-base
+    - IMAGE_NAME=diuis/docker-emsdk-base
 
 script:
   - docker build . -t "$IMAGE_NAME"
