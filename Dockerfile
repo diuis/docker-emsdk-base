@@ -1,4 +1,4 @@
-FROM diuis/docker-ubuntu-wget_nodejs_python:v1.0.1
+FROM diuis/docker-ubuntu-wget_nodejs_python:18.10
 
 ARG EMSDK_ARCHIVE=https://github.com/juj/emsdk/tarball/master
 
