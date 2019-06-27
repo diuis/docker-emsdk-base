@@ -1,4 +1,4 @@
-FROM diuis/docker-ubuntu-wget_nodejs_python:18.10
+FROM diuis/docker-ubuntu-wget_nodejs_python:19.04
 
 ARG EMSDK_ARCHIVE=https://github.com/emscripten-core/emsdk/archive/master.tar.gz
 
