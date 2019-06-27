@@ -2,7 +2,7 @@ FROM diuis/docker-ubuntu-wget_nodejs_python:18.10
 
 ARG EMSDK_ARCHIVE=https://github.com/emscripten-core/emsdk/archive/master.tar.gz
 
-RUN apt-get update && apt-get install --no-install-recommends -y make cmake g++ gcc git openjdk-8-jdk && \
+RUN apt-get update && apt-get install --no-install-recommends -y make cmake g++ gcc && \
     apt-get autoremove && apt-get clean
 
 USER appuser
